@@ -27,7 +27,7 @@ def main():
 		for x in (a,b):
 			csvfile = csv.DictReader(x, delimiter=",")
 			for row in csvfile:
-				abschluss = row['angestrebter Abschluss'].replace(' (als Hauptfac', '').replace(' (als Kern-/ E', '').replace(' (als Vollstud', '').replace(' (Weiterbildung)', '')
+				abschluss = row['angestrebter Abschluss'].replace(' (als Hauptfach)', '').replace(' (als Kern-/ Ergänzungsfach)', '').replace(' (als Vollstudiengang)', '')
 				faks.add("{} ({})".format(row['Studienfach'], abschluss))
 
 
@@ -72,7 +72,7 @@ def main():
 	with open("FAKDIFF.txt", "w") as f, open("FAKNEW.txt", "w") as faknew, open("FAKREMOVED.txt", "w") as fakremoved:
 		for fak in sorted(allfaks):
 			if fak in current and fak not in faks:
-				print("REMOVED\t{} (was: {})".format(fak, current[fak]), file=f)
+				print("REMOVED\t{} [was: {}]".format(fak, ','.join(list(current[fak]))), file=f)
 				print(fak, file=fakremoved)
 				
 				for fs in current[fak]:
@@ -81,7 +81,7 @@ def main():
 					remove_for_fs[fs].add(fak)
 				
 			if fak in faks and fak not in current:
-				print("NEW:   \t{}".format(fak), file=f)
+				print("NEW    \t{}".format(fak), file=f)
 				print(fak, file=faknew)
 
 	with open("FS-REMOVED.md", "w") as f:

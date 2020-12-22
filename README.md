@@ -41,17 +41,17 @@ Die folgende Vorgehensweise hat sich bei der Aktualisierung bewährt.
 - Studierendenstatistik - Fälle - aktuelles Semester
 - Liste der Fachschaften der RFWU Bonn mit zugeordneten FAKs (Markdown)
 
-Die Studierendenstatistik ist im Universitäts-Intranet erhältlich: 
-[Link](https://www.intranet.uni-bonn.de/organisation/verwaltung/dez-9/abt-9.3/studierendenstatistik)
+Die Studierendenstatistik ist im Universitäts-Statistik-Tool SuperX erhältlich: 
+[Link](https://superxgast.verwaltung.uni-bonn.de/superx/)
 
-Die Liste der Fachschaften der RFWU Bonn mit zugeordneten FAKs im Markdown-Format kann im fstool 
-heruntergeladen werden: [Link](https://gaia.asta.uni-bonn.de/fstool/fachschaften-md.php?fullnames)
+Die Liste der Fachschaften der RFWU Bonn mit zugeordneten FAKs im Markdown-Format kann der FKGO
+entnommen werden [Link](https://github.com/HSZemi/vs-bonn/blob/master/md/Ordnungen/FKGO.md)
 
 ### Daten vorbereiten
 
 Die Excel-Dateien der Studierendenstatistik müssen in csv-Dateien umgewandelt werden. Dafür die Datei öffnen, 
-das zweite Tabellenblatt (Quelldaten) öffnen und als csv-Datei speichern (Komma als Feldtrenner, Anführungszeichen 
-als Texttrenner)
+das zweite Tabellenblatt (Quelldaten) öffnen, die obersten 5 Zeilen mit den Hinweisen löschen und dann das Tabellenblatt
+als csv-Datei speichern (Komma als Feldtrenner, Anführungszeichen als Texttrenner)
 
 ### Skriptmagie
 
@@ -109,5 +109,5 @@ Ein paar einfache Faustregeln:
 - Einzelne Absätze werden nicht nummeriert
 - Optionen (ODER-Verknüpfung) werden mit Buchstaben "nummeriert" a., b., c.
 - Aufzählungen (UND-Verknüpfung) werden mit Zahlen "nummeriert" 1., 2., 3.
-- Keine Spiegelstricht, Bullet Points oder Ähnliches!
+- Keine Spiegelstriche, Bullet Points oder Ähnliches!
 - Geschachtelte Aufzählungen… #ToDo
